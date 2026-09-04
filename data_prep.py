@@ -1,4 +1,4 @@
-import openai
+import os
 import pandas as pd
 import faker
 from openai import OpenAI
@@ -6,8 +6,7 @@ import numpy as np
 import re
 
 
-
-client = OpenAI(api_key='your-api-key')
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 
 
